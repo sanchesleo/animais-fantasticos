@@ -212,13 +212,20 @@ body {
 }
 
 .js .js-accordion dt::after {
-  content: "⮯";
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url('../img/arrow-red.svg') no-repeat center center;
   margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform .3s;
 }
 
 .js .js-accordion dt.ativo::after {
-  content: "⮭";
+  content: "";
   margin-left: 10px;
+  transform: rotate(-90deg);
 }
 
 .js .js-accordion dd {
@@ -317,6 +324,13 @@ body {
   border-radius:2px;
 }
 
+.arrow-black{
+  background: url('../img/arrow-black.svg') no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+}
+
 
 @media (max-width: 700px) {
   .grid-container {
@@ -336,7 +350,7 @@ body {
     grid-column: 1 / 3;
   }
   .grid-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .menu {
     margin-top: 0px;
